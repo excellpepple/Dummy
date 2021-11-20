@@ -1,4 +1,4 @@
-import React from 'react';
+//import React from 'react';
 //entertainment, sports, politicts, current events, movies, pop culture, cars,
 
 //Creates an array to hold the tags
@@ -36,6 +36,18 @@ const randTag = () => tags[Math.floor(Math.random() * tags.length)].tag
 //Defines a function that deletes a given tag
 const delTag = tag => tags.forEach(object => object.tag == tag ? tags.splice(tags.indexOf(object), tags.indexOf(object)) : "Tag cannot be found")
 
+function isTag(tag) {
+    let isTagFlag = false;
+    tags.forEach(object => object.tag == tag ? isTagFlag = true : "")
+    return isTagFlag
+};
+
+function isSubtag(tag, subtag) {
+    let isSubtagFlag = false;
+    tags.forEach(object => object.tag == tag ? object.sub.forEach(sub => sub == subtag ? isSubtagFlag = true : "") : "")
+    return isSubtagFlag
+};
+
 //Adds different tags
 createTag("Movies", "Horror", "Comedy", "Romance", "Sci-fi", "Action");
 createTag("Pop Culture", "Celebrities", "T.V. Shows", "Video Games", "Sports", "Animals");
@@ -51,6 +63,7 @@ createTag("Economy", "National Economy", "Global Economy", "Stocks", "Investment
 
 
 displayTags();
+console.log(isSubtag("Pop Culture", "Video Games"))
 
 // export default Tags = () => tags;
-export {tags}
+// export {tags}
