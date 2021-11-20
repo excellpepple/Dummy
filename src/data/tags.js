@@ -10,7 +10,7 @@ const createTag = (tagName, ...subtags) => tags.push({tag: tagName, sub: subtags
 //Defines a function for displaying the tags
 const displayTags = () => tags.forEach(item => console.log(`-->${item.tag} has ${item.sub} `));
 
-//Defines a function that returns all of the subtags of a given tag (I know this is a crappy way of doing it)
+//Defines a function that returns all of the subtags of a given tag
 function subtagsOf(tag) {
     let subtags;
     tags.forEach(object => object.tag == tag ? subtags = object.sub : "Tag cannot be found")
@@ -20,7 +20,7 @@ function subtagsOf(tag) {
 //Defines a function for adding subtags to a given tag.
 const addSubtag = (tag, ...subtags) => tags.forEach(object => object.tag == tag ? subtags.forEach(subtag => object.sub.push(subtag)) : "Tag cannot be found")
 
-//Defines a function that returns the tag of a given subtag (I know this is somehow worse than the last function)
+//Defines a function that returns the tag of a given subtag
 function tagOf(subtag) {
     let tag;
     tags.forEach(object => object.sub.forEach(item => item == subtag ? tag = object.tag : "Subtag cannot be found"))
