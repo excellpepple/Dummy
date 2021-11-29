@@ -36,6 +36,21 @@ const randTag = () => tags[Math.floor(Math.random() * tags.length)].tag
 //Defines a function that deletes a given tag
 const delTag = tag => tags.forEach(object => object.tag == tag ? tags.splice(tags.indexOf(object), tags.indexOf(object)) : "Tag cannot be found")
 
+
+// Retruns a boolean value depending on whether or not the given tag exists
+function isTag(tag) {
+    let isTagFlag = false;
+    tags.forEach(object => object.tag == tag ? isTagFlag = true : "")
+    return isTagFlag
+};
+
+// Retruns a boolean value depending on whether or not the given tag has the given subtag
+function isSubtag(tag, subtag) {
+    let isSubtagFlag = false;
+    tags.forEach(object => object.tag == tag ? object.sub.forEach(sub => sub == subtag ? isSubtagFlag = true : "") : "")
+    return isSubtagFlag
+};
+
 //Adds different tags
 createTag("Movies", "Horror", "Comedy", "Romance", "Sci-fi", "Action");
 createTag("Pop Culture", "Celebrities", "T.V. Shows", "Video Games", "Sports", "Animals");

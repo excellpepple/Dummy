@@ -7,7 +7,7 @@ export default function Header() {
     return (
         <Navbar bg="dark" variant="dark" className="border-4 text-secondary border-bottom border-info">
             <Container>
-              <Navbar.Brand href="#home">
+              <Navbar.Brand href="/">
                 <img
                   alt=""
                   src={Logo}

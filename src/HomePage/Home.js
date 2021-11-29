@@ -1,13 +1,15 @@
 import React, {useState, useEffect} from 'react';
-import Header from "./Header";
+import Header from "../global/Header";
 import Start from "./Start";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import {Result} from "antd";
 import PrefrencePage from "./PrefrencePage";
 import {tags as Tags} from '../data/tags'
+import ArticlePage from "../ArticlePage/ArticlePage";
 
 export default function Home() {
-    const [tags, useTags] = useState([])
+    const [userTags, setUserTags] = useState([])
+
 
     return (
         <BrowserRouter>
@@ -15,7 +17,8 @@ export default function Home() {
             <main>
                 <Routes>
                     <Route exact path="/" element={<Start/>}/>
-                    <Route exact path="/Prefrence" element={<PrefrencePage tags={tags}/>}/>
+                    <Route path="/preference" element={<PrefrencePage tags={userTags}/>}/>
+                    <Route path="/articles" element={<ArticlePage/>}/>
                     <Route
                   path="*"
                   element={
