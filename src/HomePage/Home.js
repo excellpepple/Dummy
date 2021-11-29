@@ -12,7 +12,7 @@ export default function Home() {
 
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/">
             <Header/>
             <main>
                 <Routes>
