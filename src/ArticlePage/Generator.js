@@ -68,7 +68,7 @@ export default function Generator() {
     return (
         <>
             <div className="container">
-                {/*{articles.map(item => <Article likes={likes} dislike={dislike} action={action} data={item}/>)}*/}
+                {(myArticles)?myArticles.map(item => <Article likes={likes} dislike={dislike} action={action} data={item}/>): <h1>Nothing here</h1>}
                 <section id="debug"></section>
             </div>
         </>
