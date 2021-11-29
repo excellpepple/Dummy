@@ -1,11 +1,11 @@
-import React from 'react';
+//import React from 'react';
 //entertainment, sports, politicts, current events, movies, pop culture, cars,
 
 //Creates an array to hold the tags
 const tags = [];
 
 //Defines a function for creating tags. The first argument is the main tag, and the rest of the arguments are subtags.
-const createTag = (tagName, ...subtags) => tags.push({tag: tagName, sub: subtags});
+const createTag = (tagName, ...subtags) => tags.push({ tag: tagName, sub: subtags });
 
 //Defines a function for displaying the tags
 const displayTags = () => tags.forEach(item => console.log(`-->${item.tag} has ${item.sub} `));
@@ -44,7 +44,6 @@ function isTag(tag) {
     return isTagFlag
 };
 
-// Retruns a boolean value depending on whether or not the given tag has the given subtag
 function isSubtag(tag, subtag) {
     let isSubtagFlag = false;
     tags.forEach(object => object.tag == tag ? object.sub.forEach(sub => sub == subtag ? isSubtagFlag = true : "") : "")
@@ -66,6 +65,7 @@ createTag("Economy", "National Economy", "Global Economy", "Stocks", "Investment
 
 
 displayTags();
+console.log(isSubtag("Pop Culture", "Video Games"))
 
 // export default Tags = () => tags;
-export {tags}
+// export {tags}
