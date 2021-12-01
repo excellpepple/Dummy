@@ -1,14 +1,26 @@
-//import React from 'react';
+
 //entertainment, sports, politicts, current events, movies, pop culture, cars,
 
 //Creates an array to hold the tags
 const tags = [];
 
+function genSubObj(subtags) {
+    sub = {}
+    subtags.forEach(subtag => {sub.subsubName = subtag; sub.value = []})
+    return sub
+};
+
 //Defines a function for creating tags. The first argument is the main tag, and the rest of the arguments are subtags.
+<<<<<<< Updated upstream
 const createTag = (tagName, ...subtags) => tags.push({tag: tagName, sub: subtags});
+=======
+const createTag = (tagName, ...subtags) => {
+    tags.push({tag: tagName, sub: genSubObj(subtags)})
+    };
+>>>>>>> Stashed changes
 
 //Defines a function for displaying the tags
-const displayTags = () => tags.forEach(item => console.log(`-->${item.tag} has ${item.sub} `));
+const displayTags = () => tags.forEach(item => console.log(`-->${item.tag} has ${item.sub.subName} `));
 
 //Defines a function that returns all of the subtags of a given tag
 function subtagsOf(tag) {
@@ -36,12 +48,17 @@ const randTag = () => tags[Math.floor(Math.random() * tags.length)].tag
 //Defines a function that deletes a given tag
 const delTag = tag => tags.forEach(object => object.tag == tag ? tags.splice(tags.indexOf(object), tags.indexOf(object)) : "Tag cannot be found")
 
+<<<<<<< Updated upstream
+=======
+// Retruns a boolean value depending on whether or not the given tag exists
+>>>>>>> Stashed changes
 function isTag(tag) {
     let isTagFlag = false;
     tags.forEach(object => object.tag == tag ? isTagFlag = true : "")
     return isTagFlag
 };
 
+// Retruns a boolean value depending on whether or not the given tag has the given subtag
 function isSubtag(tag, subtag) {
     let isSubtagFlag = false;
     tags.forEach(object => object.tag == tag ? object.sub.forEach(sub => sub == subtag ? isSubtagFlag = true : "") : "")
@@ -63,7 +80,6 @@ createTag("Economy", "National Economy", "Global Economy", "Stocks", "Investment
 
 
 displayTags();
-console.log(isSubtag("Pop Culture", "Video Games"))
 
 // export default Tags = () => tags;
 // export {tags}
