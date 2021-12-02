@@ -1,14 +1,26 @@
-//import React from 'react';
+
 //entertainment, sports, politicts, current events, movies, pop culture, cars,
 
 //Creates an array to hold the tags
 const tags = [];
 
 //Defines a function for creating tags. The first argument is the main tag, and the rest of the arguments are subtags.
-const createTag = (tagName, ...subtags) => tags.push({ tag: tagName, sub: subtags });
+const createTag = (tagName, ...subtags) => {
+    const reducer = (previousValue, currentValue) => previousValue + currentValue;
+    tags.push(
+        {
+            tag: tagName,
+            sub: subtags,
+            value: [],
+            getAverage() {
+                return (this.value.length == 0)? null: (this.value.reduce(reducer) / this.value.length);
+            }
+        }
+    )
+};
 
 //Defines a function for displaying the tags
-const displayTags = () => tags.forEach(item => console.log(`-->${item.tag} has ${item.sub} `));
+const displayTags = () => tags.forEach(item => console.log(`Tag name:\t${item.tag}\nSubtags:\t[${item.sub}]\nTag value:\t[${item.value}]\nAverage value:\t${item.getAverage()}\n`));
 
 //Defines a function that returns all of the subtags of a given tag
 function subtagsOf(tag) {
@@ -36,7 +48,6 @@ const randTag = () => tags[Math.floor(Math.random() * tags.length)].tag
 //Defines a function that deletes a given tag
 const delTag = tag => tags.forEach(object => object.tag == tag ? tags.splice(tags.indexOf(object), tags.indexOf(object)) : "Tag cannot be found")
 
-
 // Retruns a boolean value depending on whether or not the given tag exists
 function isTag(tag) {
     let isTagFlag = false;
@@ -44,10 +55,17 @@ function isTag(tag) {
     return isTagFlag
 };
 
+// Retruns a boolean value depending on whether or not the given tag has the given subtag
 function isSubtag(tag, subtag) {
     let isSubtagFlag = false;
     tags.forEach(object => object.tag == tag ? object.sub.forEach(sub => sub == subtag ? isSubtagFlag = true : "") : "")
     return isSubtagFlag
+};
+
+const updateValue = (tagName, value) => {
+    message = ""
+    tags.forEach(object => object.tag == tagName ? object.value.push(value) : message = "Tag cannot be found")
+    return message
 };
 
 //Adds different tags
@@ -65,7 +83,10 @@ createTag("Economy", "National Economy", "Global Economy", "Stocks", "Investment
 
 
 displayTags();
-console.log(isSubtag("Pop Culture", "Video Games"))
+
+updateValue("Economy", 1)
+
+displayTags();
 
 // export default Tags = () => tags;
 // export {tags}
