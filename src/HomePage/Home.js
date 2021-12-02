@@ -6,7 +6,7 @@ import {Result} from "antd";
 import PrefrencePage from "./PrefrencePage";
 import {
     tags as Tags,
-    updateValue
+
 } from '../data/tags'
 import ArticlePage from "../ArticlePage/ArticlePage";
 
@@ -14,7 +14,13 @@ import ArticlePage from "../ArticlePage/ArticlePage";
 export default function Home() {
     const [tags, setTags] = useState(Tags)
     const [userTags, setUserTags] = useState([])
+    const updateValues = (tagname, value) =>{
+        let message = "";
+        tags.forEach(tag => tag.tag === tagname? tag.value.push(value): message = "Tag can not be found!");
+        alert(`updated ${tagname}`)
+        return message;
 
+    }
 
 
     return (
@@ -23,8 +29,8 @@ export default function Home() {
             <main>
                 <Routes>
                     <Route exact path="/" element={<Start/>}/>
-                    <Route path="/preference" element={<PrefrencePage tags={userTags}/>}/>
-                    <Route path="/articles" element={<ArticlePage/>}/>
+                    <Route path="/preference" element={<PrefrencePage tags={userTags} handleUpdate={updateValues}/>}/>
+                    <Route path="/articles" element={<ArticlePage handleUpdate={updateValues}/>}/>
                     <Route
                   path="*"
                   element={

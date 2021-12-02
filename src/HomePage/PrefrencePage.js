@@ -12,9 +12,19 @@ export default function PrefrencePage(props) {
     const onChange = ({target}) => {
         console.log(target.value)
     }
+    const onSelected = (type,) => {
+        setUserTags(prev=> [...prev, type.tag]);
+        props.handleUpdate(type.tag, 1)
+    }
+    const onRemoved = (type) => {
+        setUserTags(next=> userTags.filter(item => item !== type.tag))
+        props.handleUpdate(type.tag,0)
+    }
 
     const handleSubmit = (event) => {
         localStorage.setItem('userTags', userTags)
+
+
         event.preventDefault();
         history('/articles');
     };
@@ -37,7 +47,7 @@ export default function PrefrencePage(props) {
                     type="checkbox"
                     id={`inline-${type.tag}-1`}
                     onChange={(event) =>{
-                        (event.target.checked)? setUserTags(prev=> [...prev, type.tag]): setUserTags(next=> userTags.filter(item => item !== type.tag));
+                        (event.target.checked)? onSelected(type): onRemoved(type);
                     }}
                   />
                 </div>

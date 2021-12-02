@@ -65,7 +65,7 @@ function isSubtag(tag, subtag) {
 const updateValue = (tagName, value) => {
     let message = ""
     tags.forEach(object => object.tag === tagName ? object.value.push(value) : message = "Tag cannot be found")
-    alert("updated")
+    // alert("updated")
     return message
 };
 
@@ -85,9 +85,9 @@ createTag("Economy", "National Economy", "Global Economy", "Stocks", "Investment
 
 displayTags();
 
-updateValue("Economy", 1)
+// updateValue("Economy", 1)
 
 displayTags();
 
 // export default Tags = () => tags;
-export {tags, updateValue}
+export {tags}
