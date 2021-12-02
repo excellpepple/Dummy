@@ -68,4 +68,4 @@ displayTags();
 console.log(isSubtag("Pop Culture", "Video Games"))
 
 // export default Tags = () => tags;
-// export {tags}
+export {tags}

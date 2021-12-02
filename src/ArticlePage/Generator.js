@@ -27,8 +27,9 @@ export default function Generator() {
               'sortBy=popularity&' +
               'apiKey=a2a33e38fcb54b189b8930f09af7bfc2';
 
+    const [articles, setArticles] = useState([{}])
+
     let req = new Request(url);
-    let myArticles;
     fetch(req)
     .then(function(response) {
         return response;
@@ -41,10 +42,13 @@ export default function Generator() {
         .then(function(response) {
             const myObj = JSON.parse(response)
             console.log(myObj)
-            myArticles = myObj.articles;
-            myArticles.forEach(function(article) { console.log(article.title)})
+            const myArticles = myObj.articles.map(article => article);
+            console.log("--->" + typeof myArticles);
+            // setArticles(() => myArticles);
+            // myArticles.forEach(function(article) { console.log(article)})
         })
         .catch(function(err) {console.log(err)});
+
 
     const [userTags, setUserTags] = useState(localStorage.getItem('userTags').split(','));
     console.log("-->" + userTags);
@@ -68,7 +72,8 @@ export default function Generator() {
     return (
         <>
             <div className="container">
-                {(myArticles)?myArticles.map(item => <Article likes={likes} dislike={dislike} action={action} data={item}/>): <h1>Nothing here</h1>}
+                {console.log(`your object has ${typeof myArticles}`)}
+                {/*{myArticles.map(item => <Article likes={likes} dislike={dislike} action={action} data={item}/>)}*/}
                 <section id="debug"></section>
             </div>
         </>
