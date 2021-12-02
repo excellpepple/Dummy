@@ -4,11 +4,17 @@ import Start from "./Start";
 import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
 import {Result} from "antd";
 import PrefrencePage from "./PrefrencePage";
-import {tags as Tags} from '../data/tags'
+import {
+    tags as Tags,
+    updateValue
+} from '../data/tags'
 import ArticlePage from "../ArticlePage/ArticlePage";
 
+
 export default function Home() {
+    const [tags, setTags] = useState(Tags)
     const [userTags, setUserTags] = useState([])
+
 
 
     return (
