@@ -5,8 +5,8 @@ import {
     articles as Articles,
 } from '../global/FetchArticle'
 
-render = [];
-averages = [];
+const render = [];
+const averages = [];
 while (render.length < 5) {
     Tags.forEach(tag => averages.push(tag.getAverage()));
 }
