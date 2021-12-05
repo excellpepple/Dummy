@@ -12,6 +12,7 @@ const createTag = (tagName, ...subtags) => {
             tag: tagName,
             sub: subtags,
             value: [],
+            isSelected: false,
             getAverage() {
                 return (this.value.length == 0)? null: (this.value.reduce(reducer) / this.value.length);
             }
