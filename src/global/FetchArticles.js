@@ -1,33 +1,31 @@
-import {React, useState} from "react";
+// import {React, useState} from "react";
 
 function GetArticles(filter){
-
-    let url = 'https://newsapi.org/v2/everything?' +
+    let url = "https://free-news.p.rapidapi.com/v1/search?q="+ filter +"%20Musk&lang=en"
+    let url2 = 'https://newsapi.org/v2/everything?' +
               'q='+ filter +'&' +
               'from=2021-11-29&' +
               'sortBy=popularity&' +
               'apiKey=a2a33e38fcb54b189b8930f09af7bfc2';
+   let url3 = "https://api.newscatcherapi.com\n" +
+       "/v2/search?q=Tesla&page_size=2"
 
-
-
-    const req = new Request(url);
-    fetch(req)
-    .then(function(response) {
-        return response;
+    let req = new Request(url3);
+   fetch(req, {
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "free-news.p.rapidapi.com",
+            "x-rapidapi-key": "51868f4f02msh8f58539a18f70dbp11f2f8jsnc97e24498721"
+        }
     })
-    .then(function(response) {
-            return response.text().then(function(text) {
-              return text;
-            });
-        })
-        .then(function(response) {
-            const myObj = JSON.parse(response)
-            console.log(myObj)
-            const myArticles = myObj.articles.map(article => article);
-            console.log("--->" + typeof myArticles);
-            // setArticles(() => myArticles);
-            // myArticles.forEach(function(article) { console.log(article)})
-        })
-        .catch(function(err) {console.log(err)});
+    .then(response => {
+        console.log(response);
+    })
+    .catch(err => {
+        console.error(err);
+    });
 }
 GetArticles("apple")
+
+
+ export {GetArticles}

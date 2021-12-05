@@ -16,7 +16,8 @@ export default function Home() {
     const [userTags, setUserTags] = useState([])
     const updateValues = (tagname, value) =>{
         let message = "";
-        tags.forEach(tag => tag.tag === tagname? tag.value.push(value): message = "Tag can not be found!");
+        setTags()
+        // tags.forEach(tag => tag.tag === tagname? tag.value.push(value): message = "Tag can not be found!");
         alert(`updated ${tagname}`)
         return message;
 
