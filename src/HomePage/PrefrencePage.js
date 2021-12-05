@@ -14,15 +14,23 @@ export default function PrefrencePage(props) {
     }
     const onSelected = (type,) => {
         setUserTags(prev=> [...prev, type.tag]);
-        props.handleUpdate(type.tag, 1)
+
     }
     const onRemoved = (type) => {
         setUserTags(next=> userTags.filter(item => item !== type.tag))
-        props.handleUpdate(type.tag,0)
+
+    }
+    const prefered = ()=>{
+
     }
 
     const handleSubmit = (event) => {
         localStorage.setItem('userTags', userTags)
+        console.log("...............................")
+        const n = Tags.filter(tag => !userTags.includes(tag.tag))
+        n.forEach(tag => console.log("~~~~" + tag.tag))
+        userTags.forEach(item => props.handleUpdate(item, 1))
+        n.forEach(item => props.handleUpdate(item.tag,0))
 
 
         event.preventDefault();
@@ -55,6 +63,8 @@ export default function PrefrencePage(props) {
 
                  <Button type="submit" variant="outline-dark" className="">Next</Button>
             </Form>
+
+
         </section>
         </>
 

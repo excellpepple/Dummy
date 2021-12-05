@@ -31,7 +31,7 @@ export default function Generator() {
     // // const [articles, setArticles] = useState([{}])
     // //
     // let req = new Request(url);
-    GetArticles("movies")
+    // GetArticles("movies")
     useEffect(() => {
 
     })

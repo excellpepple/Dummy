@@ -25,7 +25,7 @@ function GetArticles(filter){
         console.error(err);
     });
 }
-GetArticles("apple")
+// GetArticles("apple")
 
-
- export {GetArticles}
+const articles = [];
+ export {articles}
