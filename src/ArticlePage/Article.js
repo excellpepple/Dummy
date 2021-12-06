@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Avatar, Comment, Tooltip} from "antd";
-import moment from 'moment';
 import { DislikeOutlined, LikeOutlined, DislikeFilled, LikeFilled } from '@ant-design/icons';
-import {Button, Card} from "react-bootstrap";
 import "./Article.css"
 import "./Fader.css"
 

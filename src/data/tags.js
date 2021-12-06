@@ -1,6 +1,4 @@
 
-//entertainment, sports, politicts, current events, movies, pop culture, cars,
-
 //Creates an array to hold the tags
 const tags = [];
 
@@ -83,12 +81,6 @@ createTag("Economy", "National Economy", "Global Economy", "Stocks", "Investment
 
 //Below is code to help debug.
 
+//displayTags();
 
-displayTags();
-
-// updateValue("Economy", 1)
-
-displayTags();
-
-// export default Tags = () => tags;
 export {tags}

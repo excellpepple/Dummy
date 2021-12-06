@@ -1,47 +1,45 @@
-import React from 'react';
-
 export default function MoviesDb() {
     return ([
         {   "title":"The 25 Best Movies To Watch For Free On Streaming Services",
             "author":"Mat Elfring",
             "summary":"There are a lot of streaming services currently on the market--almost too many to keep track of. However, you don't need to pay for all of them. There are numerous services that offer movies to viewers for free. Of course, these are all ad-supported movies, but that's the price you have to pay for free.From Vudu to Crackle to the free tier of Peacock, these services offer a lot of movies you'll actually want to watch, but you'll have to sift through a large catalog to find them."
-            },
-            {   "title":"Cyber Monday streaming deals: Discounts on Disney Plus, Hulu and Paramount Plus",
-                "author":"Alexander Cox",
-                "summary":"Put your feet up and grab the popcorn because we've found all the Cyber Monday streaming deals you'll need to enjoy hours of awesome sci-fi content, at a discount. Don't panic if you missed out on Black Friday because we've got a round-up of all the best Cyber Monday streaming deals for sci-fi fans. Whether you're a fan of Star Wars, Star Trek, one off movies or documentaries, there's an out-of-this-world Cyber Monday streaming deal for every sci-fi fan. Streaming services like Disney Plus (up to 6 months free when you sign up to Amazon music unlimited), Hulu (85% off) and Paramount Plus (one month free) all have Cyber Monday deals."
-            },
-            {   "title":"Holiday Movies could make you money  106.1 The Twister",
-                "author":"Karla Cantrell",
-                "summary":"Nov 29, 2021 Over the next month or so, lots of us will be watching hours and hours worth of our favorite holiday movies and now you could actually get paid for it. Reviews.org is looking to hire a Chief Holiday Cheermeister to view 25 holiday movies in 25 days and along with that sweet job title, they'll get $25-hundred for doing it. Sound like your dream job? The requirements for candidates include: Need to be over 18 Eligible to work in the U.S. And 'love all things holiday related, like peppermint mochas, fully decorated homes, and cuddling on the couch under a snowflake blanket while watching a holiday movie."
-            },
-            {   "title":"Lexus RZ is the brand's next EV",
-                "author":"Steven Ewing",
-                "summary":"The best games on Nintendo Switch More Galleries The best games on Nintendo Switch 41 Photos. The new Genesis G90 looks incredible More Galleries The new Genesis G90 looks incredible 6 Photos. Movies coming in 2021 and 2022 from Netflix, Marvel, HBO and more More Galleries Movies coming in 2021 and 2022 from Netflix, Marvel, HBO and more 67 Photos. The best Christmas movies and where to watch them. The best Christmas movies and where to watch them 18 Photos 2021 best new TV shows"
-            },
-            {   "title":"This Is Wisconsin's Most Popular Holiday Movie To Watch",
-                "author":"Hannah Deruyter",
-                "summary":"Getting the family together to watch holiday movies is one way to get into the Christmas spirit, but deciding on a family favorite can be hard at times. Instead of one person picking their favorite movie for the family to watch, Preply, a language learning app and e-learning platform, set out to find the most popular holiday movies in the United States. The winter season is upon us once more. To help usher in the spirit of the holidays, we wanted to find out which holiday movies are Americans' favorites."
-            },
-                {   "title":"Get Paid $2500 To Watch Christmas Movies  WNOK",
-                    "author":"Brady",
-                    "summary":"2021Reviews dot org is looking for you! If you want to grab some hot cocoa and a fuzzy blanket and get ready to watch holiday movies. Oh and they'll pay you! You must be 18 years or older, live in the U.S. and be ready to watch 25 Christmas movies (or your choosing) in 25 days. The reward: $2500! Apply below and good luck."
-                },
-                {   "title":"Hit Punjabi Stars Who Could Not Make a Name in Bollywood",
-                    "author":"Neha Vashist",
-                    "summary":"The 'Carry On Jatta' fame star who has such a huge fandom in Punjab, failed to leave a mark in BollywoodBe it comedy or serious genre, Gippy's work in Bollywood failed to charm the audienceNeeru Bajwa made her debut in acting with 'Main Solah Baras Ki', which was a big hit, but after that none of her other Hindi movies workedNeeru Bajwa tried her hands in a number of Hindi movies, but none of them was able to grab her the much-needed loveBinnu Dhillon who is comic timing is highly praised in Pollywood, couldn't impress the Bollywood audienceThough Binnu Dhillon has been a part of big successful movies like ‘Shaheed-E-Azam' and ‘Dev D', his character roles went almost unnoticedKavita Kaushik is a famous television and Pollywood face."
-                },
-                {   "title":"This Is Minnesota's Most Popular Holiday Movie To Watch",
-                    "author":"Hannah DeRuyter",
-                    "summary":"Getting the family together to watch holiday movies is one way to get into the Christmas spirit, but deciding on a family favorite can be hard at times. Instead of one person picking their favorite movie for the family to watch, Preply, a language learning app and e-learning platform, set out to find the most popular holiday movies in the United States. The winter season is upon us once more. To help usher in the spirit of the holidays, we wanted to find out which holiday movies are Americans' favorites."
-                },
-                {   "title":"The 10 Best Black Corny Christmas Romances Of The Season",
-                    "author":"Kathleen Newman-Bremang",
-                    "summary":"There's something about corny Christmas movies that has me in the tightest chokehold every single year around this time, and well into January. If you need me, I'll be on my couch bingeing every overly saccharine movie about a workaholic city woman who reluctantly goes to a small town — sometimes her hometown — during the holidays only to discover, also reluctantly, that the true meaning of the season is to fall in love with a man who works with his hands and usually wears plaid. The moral of the story is that only Scrooges care about their jobs and that Christmas is really about realizing you're in love with someone after a few days and sharing a chaste kiss after 90 minutes of sexual tension.",
-                },
-                {   "title":"A New Spider-Man Trilogy Starring Tom Holland Is in the Works, Amy Pascal Says",
-                    "author":"Adam Chitwood",
-                    "summary":"It looks like 'Spider-Man: No Way Home' is unlikely to be Tom Holland's last time playing Spider-Man after all. Despite recent comments from the actor that he could be stepping down as Peter Parker in the near future, producer Amy Pascal revealed in a new interview that this December's 'Spider-Man: No Way Home' is far from the last Spider-Man movie that will star Holland — at least if all goes according to plan.'This is not the last movie that we are going to make with Marvel,' Pascal told Fandango."
-                }
+        },
+        {   "title":"Cyber Monday streaming deals: Discounts on Disney Plus, Hulu and Paramount Plus",
+            "author":"Alexander Cox",
+            "summary":"Put your feet up and grab the popcorn because we've found all the Cyber Monday streaming deals you'll need to enjoy hours of awesome sci-fi content, at a discount. Don't panic if you missed out on Black Friday because we've got a round-up of all the best Cyber Monday streaming deals for sci-fi fans. Whether you're a fan of Star Wars, Star Trek, one off movies or documentaries, there's an out-of-this-world Cyber Monday streaming deal for every sci-fi fan. Streaming services like Disney Plus (up to 6 months free when you sign up to Amazon music unlimited), Hulu (85% off) and Paramount Plus (one month free) all have Cyber Monday deals."
+        },
+        {   "title":"Holiday Movies could make you money  106.1 The Twister",
+            "author":"Karla Cantrell",
+            "summary":"Nov 29, 2021 Over the next month or so, lots of us will be watching hours and hours worth of our favorite holiday movies and now you could actually get paid for it. Reviews.org is looking to hire a Chief Holiday Cheermeister to view 25 holiday movies in 25 days and along with that sweet job title, they'll get $25-hundred for doing it. Sound like your dream job? The requirements for candidates include: Need to be over 18 Eligible to work in the U.S. And 'love all things holiday related, like peppermint mochas, fully decorated homes, and cuddling on the couch under a snowflake blanket while watching a holiday movie."
+        },
+        {   "title":"Lexus RZ is the brand's next EV",
+            "author":"Steven Ewing",
+            "summary":"The best games on Nintendo Switch More Galleries The best games on Nintendo Switch 41 Photos. The new Genesis G90 looks incredible More Galleries The new Genesis G90 looks incredible 6 Photos. Movies coming in 2021 and 2022 from Netflix, Marvel, HBO and more More Galleries Movies coming in 2021 and 2022 from Netflix, Marvel, HBO and more 67 Photos. The best Christmas movies and where to watch them. The best Christmas movies and where to watch them 18 Photos 2021 best new TV shows"
+        },
+        {   "title":"This Is Wisconsin's Most Popular Holiday Movie To Watch",
+            "author":"Hannah Deruyter",
+            "summary":"Getting the family together to watch holiday movies is one way to get into the Christmas spirit, but deciding on a family favorite can be hard at times. Instead of one person picking their favorite movie for the family to watch, Preply, a language learning app and e-learning platform, set out to find the most popular holiday movies in the United States. The winter season is upon us once more. To help usher in the spirit of the holidays, we wanted to find out which holiday movies are Americans' favorites."
+        },
+        {   "title":"Get Paid $2500 To Watch Christmas Movies  WNOK",
+            "author":"Brady",
+            "summary":"2021Reviews dot org is looking for you! If you want to grab some hot cocoa and a fuzzy blanket and get ready to watch holiday movies. Oh and they'll pay you! You must be 18 years or older, live in the U.S. and be ready to watch 25 Christmas movies (or your choosing) in 25 days. The reward: $2500! Apply below and good luck."
+        },
+        {   "title":"Hit Punjabi Stars Who Could Not Make a Name in Bollywood",
+            "author":"Neha Vashist",
+            "summary":"The 'Carry On Jatta' fame star who has such a huge fandom in Punjab, failed to leave a mark in BollywoodBe it comedy or serious genre, Gippy's work in Bollywood failed to charm the audienceNeeru Bajwa made her debut in acting with 'Main Solah Baras Ki', which was a big hit, but after that none of her other Hindi movies workedNeeru Bajwa tried her hands in a number of Hindi movies, but none of them was able to grab her the much-needed loveBinnu Dhillon who is comic timing is highly praised in Pollywood, couldn't impress the Bollywood audienceThough Binnu Dhillon has been a part of big successful movies like ‘Shaheed-E-Azam' and ‘Dev D', his character roles went almost unnoticedKavita Kaushik is a famous television and Pollywood face."
+        },
+        {   "title":"This Is Minnesota's Most Popular Holiday Movie To Watch",
+            "author":"Hannah DeRuyter",
+            "summary":"Getting the family together to watch holiday movies is one way to get into the Christmas spirit, but deciding on a family favorite can be hard at times. Instead of one person picking their favorite movie for the family to watch, Preply, a language learning app and e-learning platform, set out to find the most popular holiday movies in the United States. The winter season is upon us once more. To help usher in the spirit of the holidays, we wanted to find out which holiday movies are Americans' favorites."
+        },
+        {   "title":"The 10 Best Black Corny Christmas Romances Of The Season",
+            "author":"Kathleen Newman-Bremang",
+            "summary":"There's something about corny Christmas movies that has me in the tightest chokehold every single year around this time, and well into January. If you need me, I'll be on my couch bingeing every overly saccharine movie about a workaholic city woman who reluctantly goes to a small town — sometimes her hometown — during the holidays only to discover, also reluctantly, that the true meaning of the season is to fall in love with a man who works with his hands and usually wears plaid. The moral of the story is that only Scrooges care about their jobs and that Christmas is really about realizing you're in love with someone after a few days and sharing a chaste kiss after 90 minutes of sexual tension.",
+        },
+        {   "title":"A New Spider-Man Trilogy Starring Tom Holland Is in the Works, Amy Pascal Says",
+            "author":"Adam Chitwood",
+            "summary":"It looks like 'Spider-Man: No Way Home' is unlikely to be Tom Holland's last time playing Spider-Man after all. Despite recent comments from the actor that he could be stepping down as Peter Parker in the near future, producer Amy Pascal revealed in a new interview that this December's 'Spider-Man: No Way Home' is far from the last Spider-Man movie that will star Holland — at least if all goes according to plan.'This is not the last movie that we are going to make with Marvel,' Pascal told Fandango."
+        }
     ]);
 }
 
@@ -144,34 +142,34 @@ const PoliticsDb = () => {
             "author":"Stephen Fowler",
             "summary":"Congressional districts are redrawn every ten years by state legislatures. In theory it is so populations are accurately represented when voting, but partisan gerrymandering means when you look at the map you'll probably see some really wonky shapes. We look at two states, Texas and Georgia, where redistricting will have major consequences for politicians and policy.Connect:Subscribe to the NPR Politics Podcast here.Email the show at nprpolitics@npr.orgJoin the NPR Politics Podcast Facebook Group."
         },
-            {   "title":"Why Two Experts Think The Supreme Court Is Prepared To Roll Back Roe V. Wade",
-                "author":"Juana Summers",
-                "summary":"The Supreme Court heard arguments for a case that challenges the foundation of Roe v. Wade, the decision that originally made abortion legal. In their questioning, the conservative justices seemed primed to overturn the fifty year old precedent. That decision would radically change abortion access in the United States.This episode: political correspondent Juana Summers, legal affairs correspondent Nina Totenberg, and Mary Ziegler, author of Abortion And The Law In America.Connect:Subscribe to the NPR Politics Podcast here."
-            },
-                {   "title":"Go Woke, They'll Walk: Politics Can Impact Hiring",
-                    "author":"iHeartMedia's Corey Olson",
-                    "summary":"Going woke is not only bad for companies' bottom line, it is also bad for their hiring line. According to a new survey from the University of Iowa, a majority of job seekers consider the political views of their prospective employers. The study finds 58% of those looking for a job consider an employer's politics somewhat important, and 36% consider politics very important. In all, 40% of those surveyed would be discouraged from applying to a company with political views different from their own."
-                },
-                    {   "title":"Identity Politics in Context",
-                        "author":"Gallup",
-                        "summary":"The Wall Street Journal columnist Gerald Seib recently noted that Republicans were gearing up to focus 2022 midterm voters' attention on the three I's -- inflation, immigration and identity politics. The first two of these are fairly straightforward, with the main focus centering on how candidates and political parties propose to address them. Public opinion polling on these issues is abundant. Gallup's Mohamed Younis recently reviewed the evidence relating to public opinion and inflation, and Gallup analysts over the years have done a great deal of work focusing on Americans' views on immigration."
-                    },
-                        {   "title":"Senator Jim Molan is in politics ‘for the right reasons'",
-                            "author":"2 minutes ago",
-                            "summary":"NSW Defence Innovation Network's Lincoln Parker says Liberal Senator Jim Molan is someone who is in politics 'for the right reasons'. Mr Parker told Sky News host Chris Smith there have been whisperings about a push within the NSW Liberal Party to oust Senator Molan. 'We've certainly heard some whispering … and it's very concerning,' he told Mr Smith. 'From our branch, as a policy branch in defence and national security, we certainly support returning Jim to the parliament so that he can do the good work that he's been doing, particularly in the times that we're in."
-                        },
-                        {   "title":"Report: Austria's ex-chancellor Kurz to leave politics",
-                            "author":"Abc News",
-                            "summary":"Austrian media report that the country's former chancellor, Sebastian Kurz, plans to quit politics a month after stepping down as leader amid corruption allegationsBERLIN -- Austrian media report that the country's former chancellor, Sebastian Kurz, plans to quit politics, a month after stepping down as leader amid corruption allegations.Vienna daily Krone reported Thursday that Interior Minister Karl Nehammer could replace Kurz as the head of the conservative Austrian People's Party.It quoted people close to Kurz as saying the 35-year-old had made the decision to leave politics following the recent birth of his first child."
-                        },
-                            {   "title":"Masks, marches and mandates: the year in politics from the lens of Mike Bowers",
-                                "author":"Mike Bowers",
-                                "summary":"Guardian Australia's photographer-at-large takes us through the scenes that made up a tumultuous year in Australian politics"
-                            },
-                                {   "title":"Young children find politics engaging, but by 15 this has changed",
-                                    "author":"Jan Germen Janmaat",
-                                    "summary":"At age 11, children from poorly educated families are as interested in politics as children from well-educated ones. But by the time they turn 15, children with well-educated parents are 10% more interested in politics than those with poorly educated parents. The social gap in political engagement is one of the most persistent problems in western democracies. It leads to disadvantaged people having less say in the democratic process. And it skews electoral results towards the interests of privileged groups in society."
-                                }
+        {   "title":"Why Two Experts Think The Supreme Court Is Prepared To Roll Back Roe V. Wade",
+            "author":"Juana Summers",
+            "summary":"The Supreme Court heard arguments for a case that challenges the foundation of Roe v. Wade, the decision that originally made abortion legal. In their questioning, the conservative justices seemed primed to overturn the fifty year old precedent. That decision would radically change abortion access in the United States.This episode: political correspondent Juana Summers, legal affairs correspondent Nina Totenberg, and Mary Ziegler, author of Abortion And The Law In America.Connect:Subscribe to the NPR Politics Podcast here."
+        },
+        {   "title":"Go Woke, They'll Walk: Politics Can Impact Hiring",
+            "author":"iHeartMedia's Corey Olson",
+            "summary":"Going woke is not only bad for companies' bottom line, it is also bad for their hiring line. According to a new survey from the University of Iowa, a majority of job seekers consider the political views of their prospective employers. The study finds 58% of those looking for a job consider an employer's politics somewhat important, and 36% consider politics very important. In all, 40% of those surveyed would be discouraged from applying to a company with political views different from their own."
+        },
+        {   "title":"Identity Politics in Context",
+            "author":"Gallup",
+            "summary":"The Wall Street Journal columnist Gerald Seib recently noted that Republicans were gearing up to focus 2022 midterm voters' attention on the three I's -- inflation, immigration and identity politics. The first two of these are fairly straightforward, with the main focus centering on how candidates and political parties propose to address them. Public opinion polling on these issues is abundant. Gallup's Mohamed Younis recently reviewed the evidence relating to public opinion and inflation, and Gallup analysts over the years have done a great deal of work focusing on Americans' views on immigration."
+        },
+        {   "title":"Senator Jim Molan is in politics ‘for the right reasons'",
+            "author":"2 minutes ago",
+            "summary":"NSW Defence Innovation Network's Lincoln Parker says Liberal Senator Jim Molan is someone who is in politics 'for the right reasons'. Mr Parker told Sky News host Chris Smith there have been whisperings about a push within the NSW Liberal Party to oust Senator Molan. 'We've certainly heard some whispering … and it's very concerning,' he told Mr Smith. 'From our branch, as a policy branch in defence and national security, we certainly support returning Jim to the parliament so that he can do the good work that he's been doing, particularly in the times that we're in."
+        },
+        {   "title":"Report: Austria's ex-chancellor Kurz to leave politics",
+            "author":"Abc News",
+            "summary":"Austrian media report that the country's former chancellor, Sebastian Kurz, plans to quit politics a month after stepping down as leader amid corruption allegationsBERLIN -- Austrian media report that the country's former chancellor, Sebastian Kurz, plans to quit politics, a month after stepping down as leader amid corruption allegations.Vienna daily Krone reported Thursday that Interior Minister Karl Nehammer could replace Kurz as the head of the conservative Austrian People's Party.It quoted people close to Kurz as saying the 35-year-old had made the decision to leave politics following the recent birth of his first child."
+        },
+        {   "title":"Masks, marches and mandates: the year in politics from the lens of Mike Bowers",
+            "author":"Mike Bowers",
+            "summary":"Guardian Australia's photographer-at-large takes us through the scenes that made up a tumultuous year in Australian politics"
+        },
+        {   "title":"Young children find politics engaging, but by 15 this has changed",
+            "author":"Jan Germen Janmaat",
+            "summary":"At age 11, children from poorly educated families are as interested in politics as children from well-educated ones. But by the time they turn 15, children with well-educated parents are 10% more interested in politics than those with poorly educated parents. The social gap in political engagement is one of the most persistent problems in western democracies. It leads to disadvantaged people having less say in the democratic process. And it skews electoral results towards the interests of privileged groups in society."
+        }
     ]);
 }
 

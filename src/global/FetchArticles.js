@@ -1,5 +1,3 @@
-// import {React, useState} from "react";
-
 function GetArticles(filter){
     let url = "https://free-news.p.rapidapi.com/v1/search?q="+ filter +"%20Musk&lang=en"
     let url2 = 'https://newsapi.org/v2/everything?' +
@@ -25,7 +23,5 @@ function GetArticles(filter){
         console.error(err);
     });
 }
-// GetArticles("apple")
-
 const articles = [];
  export {articles}
