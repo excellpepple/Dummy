@@ -45,22 +45,31 @@ export default function Home() {
     // Creates and offset
     const offset = 0.1
 
+    let emptyTags = []
+
+    let article;
+
     const rendered_articles = () => {
-            
-        if(Articles.length === 0 ) return "empty";
         // Creates an Array to store the chosen articles
         const render = [];
         // loops the code 5 times
-        for (let j = 0; j < 5; j++) {
+        while (render.length < 5) {
+            let count = 0;
+            Articles.forEach(articles => (articles.length === 0) ? count++ : count = 0)
+            if (count === Articles.length) {
+                return "empty";
+            }
+
+
             // Creates an Array to store the averages from tags IN ORDER
             const averages = [];
 
-            tags.forEach(tag => console.log(tag));
+            //tags.forEach(tag => console.log(tag));
             // Tags.forEach(tag => console.log(tag.getAverage()));
             // Actually assigns the averages to the averages array
             tags.forEach(tag => {
                 let average = tag.getAverage()
-                console.log(average)
+                //console.log(average)
                 averages.push(average)}
                 );
         
@@ -69,19 +78,40 @@ export default function Home() {
         
             // randomly picks a number between 0 and the sum
             let pick = Math.random() * (sum + (offset * averages.length))
-        
+            console.log(pick)
+
             // Checks to see if pick is between 0 and averages[0]
             if (pick >= 0) {
                 if (pick < (averages[0] + offset)) {
                     // adds the first article in Article index 0 to render
-                    render.push([Articles[0].pop(), tags[0].tag, tags[0].sub]);
+                    article = Articles[0].pop()
+                    if (!(emptyTags.includes(tags[0].tag))) {
+                        if (article === undefined) {
+                            emptyTags.push(tags[0].tag)
+                            render.push(["empty", tags[0].tag, tags[0].sub])
+                            continue;
+                        } else {
+                            render.push([article, tags[0].tag, tags[0].sub])
+                            continue;
+                        }
+                    }
                 } else {
                     // Iterates through all of the array averages except for averages[0] and averages[-1]
                     for (let i = 1; i < (averages.length - 1); i++) {
                         // Checks if the pick is between the sum of all of the averages up to index i and the sum of all of the averages up to index i + 1
                         if (pick >= (averages.slice(0, i).reduce((a, b) => a + b) + (i * offset)) && pick < (averages.slice(0, i + 1).reduce((a, b) => a + b) + ((i + 1) * offset))) {
                             // adds the first article in Article index i to render
-                            render.push([Articles[i].pop(), tags[i].tag, tags[i].sub]);
+                            article = Articles[i].pop()
+                            if (!(emptyTags.includes(tags[i].tag))) {
+                                if (article === undefined) {
+                                    emptyTags.push(tags[i].tag)
+                                    render.push(["empty", tags[i].tag, tags[i].sub])
+                                    continue;
+                                } else {
+                                    render.push([article, tags[i].tag, tags[i].sub])
+                                    continue;
+                                }
+                            }
                             // Breaks out of the for loop
                             break;
                         }
@@ -89,7 +119,18 @@ export default function Home() {
                     // Checks to see if pick is above the sum of all of the averages up to index -1
                     if (pick >= averages.slice(0, -1).reduce((a, b) => a + b) + ((averages.length - 1) * offset)) {
                         // adds the first article in Article index -1 to render
-                        render.push([Articles[Articles.length - 1].pop(), tags[tags.length - 1].tag, tags[tags.length - 1].sub]);
+                        //render.push([Articles[Articles.length - 1].pop(), tags[tags.length - 1].tag, tags[tags.length - 1].sub]);
+                        article = Articles[Articles.length - 1].pop()
+                        if (!(emptyTags.includes(tags[tags.length - 1].tag))) {
+                            if (article === undefined) {
+                                emptyTags.push(tags[tags.length - 1].tag)
+                                render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub])
+                                continue;
+                            } else {
+                                render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub])
+                                continue;
+                            }
+                        }
                     }
                 }
             }

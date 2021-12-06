@@ -48,6 +48,7 @@ export default function Generator(props) {
     };
     const DataNotThere = (tagname) => {
       message.warning(`We are currently out of articles related to ${tagname}.`);
+
     };
 
     return (
@@ -55,8 +56,9 @@ export default function Generator(props) {
             <div className="container-fluid">
 
             {(articles !== "empty")? (
-                articles.map(item => (
-                    (item[0] !== "empty")? <Article data={item} handleLike={like} handleDislike={dislike} />: DataNotThere(item[1])
+                articles.map((item) => (
+                    (item[0] === "empty")? DataNotThere(item[1]):  <Article  data={item} handleLike={like} handleDislike={dislike} />
+                    // <Article  data={item} handleLike={like} handleDislike={dislike} />
                 ))
             ):(
                 <h1>Its Empty</h1>
