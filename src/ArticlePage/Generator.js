@@ -4,6 +4,7 @@ import {message, Result} from 'antd'
 import {Image} from "react-bootstrap";
 import Empty from "../images/emptytag.svg";
 import {Link} from "react-router-dom";
+import use from "use";
 // assing values to tags
 const checkTags = (Main, Checked) => {
     return Main.map(tag => {
@@ -25,38 +26,47 @@ export default function Generator(props) {
         if (!mounted.current) {
             mounted.current = true;
             if(renderCount === 0){
-                setArticles(call())
+                setArticles(props.articles);
             }
         } else {
             if(renderCount === 5) {
 
-                
+                setArticles(prev => [...props.articles(), ...prev])
+                console.log( articles.length)
                 setRenderCount(0)
-                call()
 
+
+            }if(articles.length === 0){
+                setArticles("empty")
             }
-            if (renderCount === 0){
-                
-            }
+
         }
     }, [articles, renderCount])
 
-    const like = (tagName) => {
+    const like = (tagName, id) => {
         console.log("You just liked "+ tagName)
         props.handleUpdate(tagName, 1)
         console.log(`we just updated ${tagName} by 1`)
         setRenderCount(prev => prev + 1)
+        setArticles(prev => prev.filter(item => item[3] !== id))
+        // const test = articles.filter(item => item[0].title !== title)
+        // console.log(test)
       };
 
-    const dislike = (tagName) => {
+    const dislike = (tagName, id) => {
         console.log("You just disliked "+ tagName)
         props.handleUpdate(tagName, 0)
         console.log(`we just updated ${tagName} by 0`)
         setRenderCount(prev => prev++)
+        // setArticles(prev => prev.filter(item => title !== item[0].title ))
+        // console.log(articles.filter(item => item[0].title !== title))
     };
+    const [emptyTags, setEmptyTags] = useState([])
     const DataNotThere = (tagname) => {
-      message.warning(`We are currently out of articles related to ${tagname}.`);
-
+      if(!emptyTags.includes(tagname)){
+          message.warning(`We are currently out of articles related to ${tagname}.`);
+          emptyTags.push(tagname)
+      }
     };
 
     return (

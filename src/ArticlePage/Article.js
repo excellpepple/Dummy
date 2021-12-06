@@ -74,13 +74,13 @@ export default function Article(props) {
 
                                 <li className=" tag__item play  bluefas">
                                     <a  onClick={()=> {
-                                        props.handleLike(tagname);
+                                        props.handleLike(tagname, props.data[3]);
                                         setVisible(false);
                                     }}><LikeOutlined className=" fa-play mr-2" /></a>
                                 </li>
                                 <li className=" tag__item play  bluefas">
                                     <a  onClick={()=> {
-                                        props.handleLike(tagname);
+                                        props.handleLike(tagname, props.data[0].title);
                                         setVisible(false);
                                     }}><DislikeOutlined  className=" fa-play mr-2" /></a>
                                 </li>
