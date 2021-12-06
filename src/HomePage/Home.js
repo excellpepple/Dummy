@@ -8,18 +8,15 @@ import {
     tags as Tags,
 
 } from '../data/tags'
-// here is the database
 import {GetArticles} from "../data/ArticleDb";
-// import {articles as Articles} from "../global/FetchArticles"
 import ArticlePage from "../ArticlePage/ArticlePage";
-import {ArticleRender} from "../Assets/AI";
 
 
 
 export default function Home() {
     const [tags, setTags] = useState(Tags)
     const [userTags, setUserTags] = useState([])
-    console.log(GetArticles())
+    //console.log(GetArticles())
     const updateValues = (tagname, value) => {
         let message = "";
         tags.forEach(tag => {
@@ -32,14 +29,11 @@ export default function Home() {
                 tag.value.shift()
             }
         });
-        // const update = [...tags[tagname]]
 
         console.log(`updated ${tagname} and added ${value}`)
         return message;
     }
 
-    // const rendered_articles = ArticleRender(tags)
-    // console.log(rendered_articles)
     // Creates a copy of the articles
     const Articles = GetArticles()
     // Creates and offset
@@ -49,11 +43,14 @@ export default function Home() {
 
     let article;
 
+    let id = 0;
+
     const rendered_articles = () => {
         // Creates an Array to store the chosen articles
         const render = [];
         // loops the code 5 times
         while (render.length < 5) {
+            id++;
             let count = 0;
             Articles.forEach(articles => (articles.length === 0) ? count++ : count = 0)
             if (count === Articles.length) {
@@ -64,8 +61,6 @@ export default function Home() {
             // Creates an Array to store the averages from tags IN ORDER
             const averages = [];
 
-            //tags.forEach(tag => console.log(tag));
-            // Tags.forEach(tag => console.log(tag.getAverage()));
             // Actually assigns the averages to the averages array
             tags.forEach(tag => {
                 let average = tag.getAverage()
@@ -78,7 +73,6 @@ export default function Home() {
         
             // randomly picks a number between 0 and the sum
             let pick = Math.random() * (sum + (offset * averages.length))
-            console.log(pick)
 
             // Checks to see if pick is between 0 and averages[0]
             if (pick >= 0) {
@@ -88,10 +82,10 @@ export default function Home() {
                     if (!(emptyTags.includes(tags[0].tag))) {
                         if (article === undefined) {
                             emptyTags.push(tags[0].tag)
-                            render.push(["empty", tags[0].tag, tags[0].sub])
+                            render.push(["empty", tags[0].tag, tags[0].sub, id])
                             continue;
                         } else {
-                            render.push([article, tags[0].tag, tags[0].sub])
+                            render.push([article, tags[0].tag, tags[0].sub, id])
                             continue;
                         }
                     }
@@ -105,10 +99,10 @@ export default function Home() {
                             if (!(emptyTags.includes(tags[i].tag))) {
                                 if (article === undefined) {
                                     emptyTags.push(tags[i].tag)
-                                    render.push(["empty", tags[i].tag, tags[i].sub])
+                                    render.push(["empty", tags[i].tag, tags[i].sub, id])
                                     continue;
                                 } else {
-                                    render.push([article, tags[i].tag, tags[i].sub])
+                                    render.push([article, tags[i].tag, tags[i].sub, id])
                                     continue;
                                 }
                             }
@@ -119,15 +113,14 @@ export default function Home() {
                     // Checks to see if pick is above the sum of all of the averages up to index -1
                     if (pick >= averages.slice(0, -1).reduce((a, b) => a + b) + ((averages.length - 1) * offset)) {
                         // adds the first article in Article index -1 to render
-                        //render.push([Articles[Articles.length - 1].pop(), tags[tags.length - 1].tag, tags[tags.length - 1].sub]);
                         article = Articles[Articles.length - 1].pop()
                         if (!(emptyTags.includes(tags[tags.length - 1].tag))) {
                             if (article === undefined) {
                                 emptyTags.push(tags[tags.length - 1].tag)
-                                render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub])
+                                render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
                                 continue;
                             } else {
-                                render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub])
+                                render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
                                 continue;
                             }
                         }
