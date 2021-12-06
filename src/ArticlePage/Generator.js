@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import Article from "./Article";
-import {tags as Tags} from "../data/tags";
-import resolve from "resolve";
-import {GetArticles} from "../global/FetchArticles";
 
 // assing values to tags
 const checkTags = (Main, Checked) => {
@@ -12,56 +9,32 @@ const checkTags = (Main, Checked) => {
     })
 }
 
-
-// takes feed back after users reads article and updates value
-const updateValue = feedback => {
-
-}
-
-
-
-export default function Generator() {
-
-    // let url = 'https://newsapi.org/v2/everything?' +
-    //           'q='+ search +'&' +
-    //           'from=2021-11-29&' +
-    //           'sortBy=popularity&' +
-    //           'apiKey=a2a33e38fcb54b189b8930f09af7bfc2';
-    //
-    // // const [articles, setArticles] = useState([{}])
-    // //
-    // let req = new Request(url);
-    // GetArticles("movies")
-    useEffect(() => {
-
-    })
-
-
+export default function Generator(props) {
     const [userTags, setUserTags] = useState(localStorage.getItem('userTags').split(','));
     console.log("-->" + userTags);
 
 
-    const [likes, setLikes] = useState(0);
-    const [dislikes, setDislikes] = useState(0);
-    const [action, setAction] = useState(null);
-    const like = () => {
-        setLikes(1);
-        setDislikes(0);
-        setAction('liked');
+
+    const like = (tagName) => {
+        console.log("You just liked "+ tagName)
+        // props.handleUpdate(tagName, 1)
+        console.log(`we just updated ${tagName} by 1`)
       };
 
-    const dislike = () => {
-        setLikes(0);
-        setDislikes(1);
-        setAction('disliked');
+    const dislike = (tagName) => {
+        console.log("You just disliked "+ tagName)
+        // props.handleUpdate(tagName, 0)
+        console.log(`we just updated ${tagName} by 0`)
+
     };
 
     return (
         <>
-            <div className="container">
-                {console.log(`your object has ${typeof myArticles}`)}
-                {/*{myArticles.map(item => <Article likes={likes} dislike={dislike} action={action} data={item}/>)}*/}
-                <section id="debug"></section>
+            <div className="container-fluid">
+
+                <Article  data={[{author: "excell", title: "Testing Article"}, "Music"]} handleLike={like} handleDislike={dislike}/>
+                <Article  data={[{author: "excell", title: "Testing Article"}, "Pop Culture"]} handleLike={like} handleDislike={dislike}/>
+                <Article  data={[{author: "excell", title: "Testing Article"}, "Movies"]} handleLike={like} handleDislike={dislike}/>
             </div>
         </>
     );
