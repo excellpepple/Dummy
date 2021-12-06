@@ -50,7 +50,6 @@ export default function Home() {
         const render = [];
         // loops the code 5 times
         while (render.length < 5) {
-            id++;
             let count = 0;
             Articles.forEach(articles => (articles.length === 0) ? count++ : count = 0)
             if (count === Articles.length) {
@@ -82,9 +81,11 @@ export default function Home() {
                     if (!(emptyTags.includes(tags[0].tag))) {
                         if (article === undefined) {
                             emptyTags.push(tags[0].tag)
+                            id++;
                             render.push(["empty", tags[0].tag, tags[0].sub, id])
                             continue;
                         } else {
+                            id++;
                             render.push([article, tags[0].tag, tags[0].sub, id])
                             continue;
                         }
@@ -99,9 +100,11 @@ export default function Home() {
                             if (!(emptyTags.includes(tags[i].tag))) {
                                 if (article === undefined) {
                                     emptyTags.push(tags[i].tag)
+                                    id++;
                                     render.push(["empty", tags[i].tag, tags[i].sub, id])
                                     continue;
                                 } else {
+                                    id++;
                                     render.push([article, tags[i].tag, tags[i].sub, id])
                                     continue;
                                 }
@@ -117,9 +120,11 @@ export default function Home() {
                         if (!(emptyTags.includes(tags[tags.length - 1].tag))) {
                             if (article === undefined) {
                                 emptyTags.push(tags[tags.length - 1].tag)
+                                id++;
                                 render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
                                 continue;
                             } else {
+                                id++;
                                 render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
                                 continue;
                             }
@@ -128,6 +133,7 @@ export default function Home() {
                 }
             }
         }
+        console.log(render)
         return render;
     }
 
