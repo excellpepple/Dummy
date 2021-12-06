@@ -13,8 +13,8 @@ const Articles = [...A]
 const offset = 0.1
 
 
-// returns nw sets of articles each timeits called
-function articleRender () {
+// returns nw sets of articles each time its called
+function ArticleRender () {
     if(Articles.length === 0 ) return "empty";
     // Creates an Array to store the averages from tags IN ORDER
     const averages = [];
@@ -57,4 +57,4 @@ function articleRender () {
     }
 }
 
-export {articleRender}
+export {ArticleRender}

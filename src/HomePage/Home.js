@@ -21,15 +21,25 @@ export default function Home() {
 
     const updateValues = (tagname, value) =>{
         let message = "";
+        const shifter = (target) =>{
+            if (target.length <= 5){
+                console.log(`we just added 1 with no issue`)
+                target.value.push(value)
+            }
+            else {
 
-        tags.forEach(tag => tag.tag === tagname? tag.value.push(value): message = "Tag can not be found!");
+                target.value.shift()
+                console.log(`we just shifted the first index of ${target.tag}`)
+                target.value.push(value)
+                console.log(`we just added a new value ${target.tag}`);
+            }
+        }
+        tags.forEach(tag => tag.tag === tagname? shifter(tag): message = "Tag can not be found!");
 
         // const update = [...tags[tagname]]
 
         console.log(`updated ${tagname} and added ${value}`)
         return message;
-
-
     }
 
 
