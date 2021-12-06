@@ -1,6 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Article from "./Article";
-import {message} from 'antd'
+import {message, Result} from 'antd'
+import {Image} from "react-bootstrap";
+import Empty from "../images/emptytag.svg";
+import {Link} from "react-router-dom";
+// assing values to tags
 const checkTags = (Main, Checked) => {
     return Main.map(tag => {
         (tag in Checked)? tag.sub.value.push(1): tag.sub.value.push(0);
@@ -65,7 +69,14 @@ export default function Generator(props) {
                     // <Article  data={item} handleLike={like} handleDislike={dislike} />
                 ))
             ):(
-                <h1>Its Empty</h1>
+                <>
+                    <Result
+                        icon={<Image src={Empty} className="h-25 w-25 mt-5"/>}
+                        title="No article to show!"
+                        subTitle="Looks like We're out of articles right now, thanks for exploring our site!"
+                        extra={<Link to="/" className=" btn btn-lg  btn-outline-info" >Back to Home-Page</Link>}
+                      />
+                </>
             )}
             </div>
         </>
