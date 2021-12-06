@@ -1,14 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from "../global/Header";
 import Start from "./Start";
-import {BrowserRouter, Link, Route, Routes} from "react-router-dom";
-import {Result} from "antd";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { Result } from "antd";
 import PrefrencePage from "./PrefrencePage";
 import {
     tags as Tags,
 
 } from '../data/tags'
-import {GetArticles} from "../data/ArticleDb";
+import { GetArticles } from "../data/ArticleDb";
 import ArticlePage from "../ArticlePage/ArticlePage";
 
 
@@ -16,7 +16,7 @@ import ArticlePage from "../ArticlePage/ArticlePage";
 export default function Home() {
     const [tags, setTags] = useState(Tags)
     const [userTags, setUserTags] = useState([])
-    //console.log(GetArticles())
+        //console.log(GetArticles())
     const updateValues = (tagname, value) => {
         let message = "";
         tags.forEach(tag => {
@@ -36,7 +36,7 @@ export default function Home() {
 
     // Creates a copy of the articles
     const Articles = GetArticles()
-    // Creates and offset
+        // Creates and offset
     const offset = 0.1
 
     let emptyTags = []
@@ -63,13 +63,13 @@ export default function Home() {
             // Actually assigns the averages to the averages array
             tags.forEach(tag => {
                 let average = tag.getAverage()
-                //console.log(average)
-                averages.push(average)}
-                );
-        
+                    //console.log(average)
+                averages.push(average)
+            });
+
             // Creates a variable to hold the sum of all of the averages
-            const sum = averages.reduce((a, b)=> a + b)
-        
+            const sum = averages.reduce((a, b) => a + b)
+
             // randomly picks a number between 0 and the sum
             let pick = Math.random() * (sum + (offset * averages.length))
 
@@ -80,13 +80,11 @@ export default function Home() {
                     article = Articles[0].pop()
                     if (!(emptyTags.includes(tags[0].tag))) {
                         if (article === undefined) {
-                            emptyTags.push(tags[0].tag)
-                            id++;
-                            render.push(["e", tags[0].tag, tags[0].sub, id])
+                            emptyTags.push(tags[0].tag);
+                            render.push(["empty", tags[0].tag, tags[0].sub, tags[0].id])
                             continue;
                         } else {
-                            id++;
-                            render.push([article, tags[0].tag, tags[0].sub, id])
+                            render.push([article, tags[0].tag, tags[0].sub, tags[0].id])
                             continue;
                         }
                     }
@@ -100,12 +98,10 @@ export default function Home() {
                             if (!(emptyTags.includes(tags[i].tag))) {
                                 if (article === undefined) {
                                     emptyTags.push(tags[i].tag)
-                                    id++;
-                                    render.push(["e", tags[i].tag, tags[i].sub, id])
+                                    render.push(["empty", tags[i].tag, tags[i].sub, tags[0].id])
                                     continue;
                                 } else {
-                                    id++;
-                                    render.push([article, tags[i].tag, tags[i].sub, id])
+                                    render.push([article, tags[i].tag, tags[i].sub, tags[0].id])
                                     continue;
                                 }
                             }
@@ -120,12 +116,10 @@ export default function Home() {
                         if (!(emptyTags.includes(tags[tags.length - 1].tag))) {
                             if (article === undefined) {
                                 emptyTags.push(tags[tags.length - 1].tag)
-                                id++;
-                                render.push(["e", tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
+                                render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub, tags[0].id])
                                 continue;
                             } else {
-                                id++;
-                                render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
+                                render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub, tags[0].id])
                                 continue;
                             }
                         }
@@ -141,31 +135,50 @@ export default function Home() {
         window.location.reload(true)
     }
     document.title = "Dont-Be-A-Dummy.com";
-    return (
-        <BrowserRouter basename="/" >
-            <Header/>
-            <main>
-                <Routes>
-                    <Route exact path="/" element={<Start/>}/>
-                    <Route path="/preference" element={<PrefrencePage tags={userTags} handleUpdate={updateValues}/>}/>
-                    <Route path="/articles" element={<ArticlePage handleUpdate={updateValues} articles={(() => rendered_articles)()} handleRefresh={refresh}/>}/>
-                    <Route
-                  path="*"
-                  element={
-                     <Result
-                        status="404"
-                        title="404"
-                        subTitle="Sorry, the page you visited does not exist."
-                        extra={<Link to="/" className="btn btn-outline-warning" type="primary">Back Home</Link>}
-                      />
-                  }
-                />
-                </Routes>
+    return ( <
+            BrowserRouter basename = "/" >
+            <
+            Header / >
+            <
+            main >
+            <
+            Routes >
+            <
+            Route exact path = "/"
+            element = { < Start / > }
+            /> <
+            Route path = "/preference"
+            element = { < PrefrencePage tags = { userTags }
+                handleUpdate = { updateValues }
+                />}/ >
+                <
+                Route path = "/articles"
+                element = { < ArticlePage handleUpdate = { updateValues }
+                    articles = {
+                        (() => rendered_articles)()
+                    }
+                    handleRefresh = { refresh }
+                    />}/ >
+                    <
+                    Route
+                    path = "*"
+                    element = { <
+                        Result
+                        status = "404"
+                        title = "404"
+                        subTitle = "Sorry, the page you visited does not exist."
+                        extra = { < Link to = "/"
+                            className = "btn btn-outline-warning"
+                            type = "primary" > Back Home < /Link>} / >
+                        }
+                        /> < /
+                        Routes >
 
-            </main>
+                        <
+                        /main>
 
 
-        </BrowserRouter>
-    );
-}
- 
+                        <
+                        /BrowserRouter>
+                    );
+                }
