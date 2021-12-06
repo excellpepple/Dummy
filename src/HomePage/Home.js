@@ -51,7 +51,7 @@ export default function Home() {
         // Creates an Array to store the chosen articles
         const render = [];
         // loops the code 5 times
-        for (let j = 0; j < 15; j++) {
+        for (let j = 0; j < 5; j++) {
             // Creates an Array to store the averages from tags IN ORDER
             const averages = [];
 
