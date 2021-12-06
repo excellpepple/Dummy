@@ -18,6 +18,7 @@ export default function Article(props) {
 
     // const { summary} = props.data[0]
     const tagname = props.data[1]
+    const id = props.data[3]
     // const subtags = [...props.data[2]]
     const bg_img = () => {
         // eslint-disable-next-line default-case
@@ -71,13 +72,13 @@ export default function Article(props) {
 
                                 <li className=" tag__item play  bluefas">
                                     <a  onClick={()=> {
-                                        props.handleLike(tagname, props.data[3]);
+                                        props.handleLike(tagname, id);
                                         setVisible(false);
                                     }}><LikeOutlined className=" fa-play mr-2" /></a>
                                 </li>
                                 <li className=" tag__item play  bluefas">
                                     <a  onClick={()=> {
-                                        props.handleLike(tagname, props.data[0].title);
+                                        props.handleLike(tagname, id);
                                         setVisible(false);
                                     }}><DislikeOutlined  className=" fa-play mr-2" /></a>
                                 </li>
