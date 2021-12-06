@@ -81,12 +81,11 @@ export default function Home() {
                     if (!(emptyTags.includes(tags[0].tag))) {
                         if (article === undefined) {
                             emptyTags.push(tags[0].tag)
-                            id++;
-                            render.push(["empty", tags[0].tag, tags[0].sub, id])
+                            ;
+                            render.push(["empty", tags[0].tag, tags[0].sub, tags[0].id])
                             continue;
                         } else {
-                            id++;
-                            render.push([article, tags[0].tag, tags[0].sub, id])
+                            render.push([article, tags[0].tag, tags[0].sub, tags[0].id])
                             continue;
                         }
                     }
@@ -100,12 +99,10 @@ export default function Home() {
                             if (!(emptyTags.includes(tags[i].tag))) {
                                 if (article === undefined) {
                                     emptyTags.push(tags[i].tag)
-                                    id++;
-                                    render.push(["empty", tags[i].tag, tags[i].sub, id])
+                                    render.push(["empty", tags[i].tag, tags[i].sub, tags[0].id])
                                     continue;
                                 } else {
-                                    id++;
-                                    render.push([article, tags[i].tag, tags[i].sub, id])
+                                    render.push([article, tags[i].tag, tags[i].sub, tags[0].id])
                                     continue;
                                 }
                             }
@@ -120,12 +117,10 @@ export default function Home() {
                         if (!(emptyTags.includes(tags[tags.length - 1].tag))) {
                             if (article === undefined) {
                                 emptyTags.push(tags[tags.length - 1].tag)
-                                id++;
-                                render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
+                                render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub, tags[0].id])
                                 continue;
                             } else {
-                                id++;
-                                render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
+                                render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub, tags[0].id])
                                 continue;
                             }
                         }
