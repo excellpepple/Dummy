@@ -53,7 +53,7 @@ export default function Home() {
             let count = 0;
             Articles.forEach(articles => (articles.length === 0) ? count++ : count = 0)
             if (count === Articles.length) {
-                return "empty";
+                return "e";
             }
 
 
@@ -82,7 +82,7 @@ export default function Home() {
                         if (article === undefined) {
                             emptyTags.push(tags[0].tag)
                             id++;
-                            render.push(["empty", tags[0].tag, tags[0].sub, id])
+                            render.push(["e", tags[0].tag, tags[0].sub, id])
                             continue;
                         } else {
                             id++;
@@ -101,7 +101,7 @@ export default function Home() {
                                 if (article === undefined) {
                                     emptyTags.push(tags[i].tag)
                                     id++;
-                                    render.push(["empty", tags[i].tag, tags[i].sub, id])
+                                    render.push(["e", tags[i].tag, tags[i].sub, id])
                                     continue;
                                 } else {
                                     id++;
@@ -121,7 +121,7 @@ export default function Home() {
                             if (article === undefined) {
                                 emptyTags.push(tags[tags.length - 1].tag)
                                 id++;
-                                render.push(["empty", tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
+                                render.push(["e", tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
                                 continue;
                             } else {
                                 id++;
@@ -136,15 +136,19 @@ export default function Home() {
         console.log(render)
         return render;
     }
-
+    const [loadPage, setLoadPage] = useState(false)
+    const refresh = () => {
+        window.location.reload(true)
+    }
+    document.title = "Dont-Be-A-Dummy.com";
     return (
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/" >
             <Header/>
             <main>
                 <Routes>
                     <Route exact path="/" element={<Start/>}/>
                     <Route path="/preference" element={<PrefrencePage tags={userTags} handleUpdate={updateValues}/>}/>
-                    <Route path="/articles" element={<ArticlePage handleUpdate={updateValues} articles={(() => rendered_articles)()}/>}/>
+                    <Route path="/articles" element={<ArticlePage handleUpdate={updateValues} articles={(() => rendered_articles)()} handleRefresh={refresh}/>}/>
                     <Route
                   path="*"
                   element={

@@ -306,8 +306,20 @@ const EconomyDb = () => {
         }
     ]);
 }
+
+const Editor = (arr, tagname) => {
+    const copy = []
+
+    for (let i = 0; i < arr.length; i++){
+        let a = {id: tagname + i}
+        Object.assign(a, arr[i])
+        copy.push(a)
+
+    }
+    return copy;
+}
 const GetArticles = () => {
-    return ([MoviesDb(), PopcultureDb(), PoliticsDb(), CurrentEventsDb(), ScienceDb(), MusicDb(), EconomyDb()])
+    return ([Editor(MoviesDb(), "Movies"), Editor(PopcultureDb(), "Pop-Culture"), Editor(PoliticsDb(), "Politics"), Editor(CurrentEventsDb(), "Current-Events"), Editor(ScienceDb(), "Science"), Editor(MusicDb(), "Music"), Editor(EconomyDb(), "Economy")])
 }
 
 export {GetArticles}
