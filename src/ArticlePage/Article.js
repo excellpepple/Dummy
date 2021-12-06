@@ -38,11 +38,11 @@ export default function Article(props) {
         // eslint-disable-next-line default-case
         switch (tagname) {
             case "Movies": return "bg-warning";
-            case "Music": return "bg-info";
+            case "Music": return "bg-danger";
             case "Pop Culture": return "bg-secondary";
-            case "Science": return "bg-primary";
-            case "Current Events": return "bg-dark";
-            case "Politics": return "bg-info";
+            case "Science": return "bg-info";
+            case "Current Events": return "bg-secondary";
+            case "Politics": return "bg-warning";
             case "Economy": return "bg-danger";
         }
     }
