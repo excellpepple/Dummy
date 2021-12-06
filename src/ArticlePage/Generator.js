@@ -27,17 +27,22 @@ export default function Generator(props) {
         } else {
             if(renderCount === 5) {
 
-                setArticles(call())
+                
                 setRenderCount(0)
+                call()
+
+            }
+            if (renderCount === 0){
+                
             }
         }
-    }, [articles, props.article, renderCount])
+    }, [articles, renderCount])
 
     const like = (tagName) => {
         console.log("You just liked "+ tagName)
         props.handleUpdate(tagName, 1)
         console.log(`we just updated ${tagName} by 1`)
-        setRenderCount(prev => prev++)
+        setRenderCount(prev => prev + 1)
       };
 
     const dislike = (tagName) => {
