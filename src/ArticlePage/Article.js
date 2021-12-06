@@ -17,6 +17,7 @@ import Science from "../images/bg-images/Science.jpg";
 export default function Article(props) {
 
     // const { summary} = props.data[0]
+    const exist = props.data[0]
     const tagname = props.data[1]
     const id = props.id
     // const subtags = [...props.data[2]]
@@ -72,13 +73,13 @@ export default function Article(props) {
 
                                 <li className=" tag__item play  bluefas">
                                     <a  onClick={()=> {
-                                        props.handleLike(tagname, id);
+                                        props.handleLike(tagname, id, exist);
                                         setVisible(false);
                                     }}><LikeOutlined className=" fa-play mr-2" /></a>
                                 </li>
                                 <li className=" tag__item play  bluefas">
                                     <a  onClick={()=> {
-                                        props.handleLike(tagname, id);
+                                        props.handleLike(tagname, id, exist);
                                         setVisible(false);
                                     }}><DislikeOutlined  className=" fa-play mr-2" /></a>
                                 </li>

@@ -38,14 +38,19 @@ export default function Home() {
     let article;
     let id = 0;
     const rendered_articles = () => {
+
+        const debug = null
         // Creates an Array to store the chosen articles
         const render = [];
+
+        let timer = 0
         // loops the code 5 times
-        while (render.length < 5) {
+        while (render.length < 5 && timer < 70) {
+            timer++
             let count = 0;
             Articles.forEach(articles => (articles.length === 0) ? count++ : count = 0)
             if (count === Articles.length) {
-                return "e";
+                return [];
             }
 
             // Creates an Array to store the averages from tags IN ORDER
@@ -70,11 +75,13 @@ export default function Home() {
                     if (!(emptyTags.includes(tags[0].tag))) {
                         if (article === undefined) {
                             emptyTags.push(tags[0].tag)
-                            id++;
-                            render.push(["e", tags[0].tag, tags[0].sub, id])
+                            //id++;
+                            //console.log(id)
+                            //render.push([debug, tags[0].tag, tags[0].sub, id])
                             continue;
                         } else {
                             id++;
+                            console.log(id)
                             render.push([article, tags[0].tag, tags[0].sub, id])
                             continue;
                         }
@@ -89,13 +96,13 @@ export default function Home() {
                             if (!(emptyTags.includes(tags[i].tag))) {
                                 if (article === undefined) {
                                     emptyTags.push(tags[i].tag)
-                                    id++;
-                                    render.push(["e", tags[i].tag, tags[i].sub, id])
-                                    continue;
+                                    //id++;
+                                    //console.log(id)
+                                    //render.push([debug, tags[i].tag, tags[i].sub, id])
                                 } else {
                                     id++;
+                                    console.log(id)
                                     render.push([article, tags[i].tag, tags[i].sub, id])
-                                    continue;
                                 }
                             }
                             // Breaks out of the for loop
@@ -110,11 +117,13 @@ export default function Home() {
                         if (!(emptyTags.includes(tags[tags.length - 1].tag))) {
                             if (article === undefined) {
                                 emptyTags.push(tags[tags.length - 1].tag)
-                                id++;
-                                render.push(["e", tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
+                                //id++;
+                                //console.log(id)
+                                //render.push([debug, tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
                                 continue;
                             } else {
                                 id++;
+                                console.log(id)
                                 render.push([article, tags[tags.length - 1].tag, tags[tags.length - 1].sub, id])
                                 continue;
                             }
@@ -123,11 +132,16 @@ export default function Home() {
                 }
             }
         }
-        console.log(render)
-        return render;
+        if (timer === 70) {
+            console.log("THE STUFF IS GONE")
+            return [];
+        } else {
+            return render;
+        }
     }
 
-   const [loadPage, setLoadPage] = useState(false)
+
+
     const refresh = () => {
         window.location.reload(true)
     }
@@ -135,6 +149,7 @@ export default function Home() {
     return (
         <BrowserRouter basename="/" >
             <Header/>
+
             <main>
                 <Routes>
                     <Route exact path="/" element={<Start/>}/>

@@ -16,7 +16,7 @@ const checkTags = (Main, Checked) => {
 export default function Generator(props) {
     const [userTags, setUserTags] = useState(localStorage.getItem('userTags').split(','));
     //console.log("-->" + userTags);
-    const call = () => props.articles
+    // const call = () => props.articles
     const [articles, setArticles] = useState([])
     // const [check, setCheck] = useState(props.articles)
     //console.log( typeof call)
@@ -26,13 +26,13 @@ export default function Generator(props) {
         if (!mounted.current) {
             mounted.current = true;
             if(renderCount === 0){
-                setArticles(props.articles);
+                setArticles(props.articles());
             }
         } else {
             if(renderCount === 5) {
 
                 setArticles(prev => [...props.articles(), ...prev])
-                console.log( articles.length)
+                // console.log( articles.length)
                 setRenderCount(0)
 
 
@@ -42,24 +42,26 @@ export default function Generator(props) {
                 }
             }
         }
-    }, [articles, props, renderCount])
+    }, [articles, props, props.articles, renderCount])
 
-   const like = (tagName, id) => {
+   const like = (tagName, id, exist) => {
         console.log("You just liked "+ tagName)
         props.handleUpdate(tagName, 1)
         console.log(`we just updated ${tagName} by 1`)
         setRenderCount(prev => prev + 1)
-        setArticles(prev => prev.filter(item => item[0].id !== id))
+       setArticles(prev => prev.filter(item => item[0].id !== id))
+
         // const test = articles.filter(item => item[0].title !== title)
         // console.log(test)
       };
 
-    const dislike = (tagName, id) => {
+    const dislike = (tagName, id, exist) => {
         console.log("You just disliked "+ tagName)
         props.handleUpdate(tagName, 0)
         console.log(`we just updated ${tagName} by 0`)
         setRenderCount(prev => prev++)
-        // setArticles(prev => prev.filter(item => title !== item[0].title ))
+        setArticles(prev => prev.filter(item => item[0].id !== id))
+
         // console.log(articles.filter(item => item[0].title !== title))
     };
     const [emptyTags, setEmptyTags] = useState([])
@@ -82,7 +84,7 @@ export default function Generator(props) {
               />
             {(articles.length !== 0)? (
                 articles.map((item, key) => (
-                    (item[0] === "e")? DataNotThere(item[1]):  <Article key={"article"+key} id={item[0].id} data={item} handleLike={like} handleDislike={dislike} />
+                    (item[0] === null)? DataNotThere(item[1]):  <Article key={"article"+key} id={item[0].id} data={item} handleLike={like} handleDislike={dislike} />
                     // <Article  data={item} handleLike={like} handleDislike={dislike} />
                 ))
             ):(
