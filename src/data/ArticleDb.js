@@ -52,7 +52,7 @@ const MusicDb = () => {
             "summary":"Apple Music offers lossless audio, which is the highest quality music you can get from streaming apps. Lossless audio takes more space and internet bandwidth to download than standard music. You can get lossless audio in every version of the Apple Music app for no extra cost. Visit Insider's Tech Reference library for more stories. Music streaming apps like Spotify and Apple Music are great for building massive collections of your favorite tracks from across the eras. But any audiophile will tell you that what you get in accessibility, you're giving up in audio quality."
         },
         {   "title":"2022 Grammy Nominees",
-            "author":NULL,
+            "author":null,
             "summary":"The 2022 Grammy Award Nominees were announced on November 23rd, 2021. Congratulations to the Tisch alumni, friends, and faculty nominated for an award! We are thrilled to celebrate the members of our Tisch community nominated for a 2022 Grammy Award. This year, 14 alumni, faculty, and friends are nominated for their work on 16 projects across 11 categories. The Recording Academy will present the 2022 Grammy Awards show on Monday January 31 at a ceremony hosted by Trevor Noah, which will air on CBS and stream live on Paramount+."
         },
         {   "title":"New Survey from Dolby Reveals Shifts in Music Listening Behavior Among Adults in the U.S.",
@@ -64,11 +64,11 @@ const MusicDb = () => {
             "summary":"We'll show you how to get your musical recap of tunes on Apple Music, YouTube Music and Tidal. It's the first week of December, and so that means your friends, family and everybody in between will begin sharing their end-of-the-year music recap on social media, thanks to Spotify Wrapped. But even if you don't have Spotify -- or you have other music streaming services as well -- you can also show off your music listening history for the year. That includes top songs, artists and albums in a series of colorful visuals that are specifically designed to share on social media."
         },
         {   "title":"How did China's digital music industry become the second largest in the world?",
-            "author":NULL,
+            "author":null,
             "summary":"Hindered for years by online piracy, China has morphed into the world's seventh-largest music market, behind South Korea A decade ago, 99 per cent of China's digital music was pirated, but now most Chinese consumers listen to licensed music - meaning they stream legally China's music industry has grown rapidly to become one of the world's largest over the past decade. Since breaking into the top 10 of the International Federation of the Phonographic Industry's (IFPI's) global rankings of music markets in 2017, it has risen to seventh place, just behind South Korea."
         },
         {   "title":"Make Music Winter Returns December 21",
-            "author":NULL,
+            "author":null,
             "summary":"Free, Participatory Musical Celebration Welcomes All on the Winter Solstice. NEW YORK, Nov. 30, 2021 /PRNewswire/ -- Make Music Winter, a free outdoor musical celebration with exuberant and participatory parades, performances, and events throughout New York and in dozens of U.S. cities, will return on the Winter Solstice, Tuesday, December 21 . The annual event welcomes people of all ages and musical abilities to celebrate the joy of making music with fellow community members. Since its start in 2011, Make Music Winter has provided a way for music enthusiasts to meet up, march and play through public spaces, and make music with bells, electric guitars, voices, percussion, and more unusual instruments."
         },
         {   "title":"How to find your Apple Music Replay, a list of your favorite songs of the year so far that updates each week",
@@ -80,7 +80,7 @@ const MusicDb = () => {
             "summary":"Music consumption has changed a lot since the year 2000. Back then, people purchased CDs, traditional radio still held weight, MTV was hot, and file sharing had become commonplace for those with PCs and fast internet connections. Over time, the music industry morphed to take advantage of the new digital landscape and to find new ways to capture dollars previously lost to Napster and BearShare. Digital downloads and online streaming music services eventually became the norm, thanks to the likes of iTunes and Pandora, respectively."
         },
         {   "title":"Believe reinforces its leadership position in India with the acquisition of Think Music, a leader in South India film soundtracks",
-            "author":NULL,
+            "author":null,
             "summary":"Believe reinforces its leadership position in India with the acquisition of Think Music, a leader in South India film soundtracks. Paris, November 29, 2021 – Believe, one of the world's leading digital music companies, strengthens its leadership in the fast-growing Indian market with the acquisition of Think Music, one of the leading in South India based music labels. Since entering the market in 2013, Believe India has become one of the leading players of the Indian digital music market with offices in 7 regions and 171 employees through organic growth and acquisitions."
         },
         {   "title":"New Survey from Dolby Reveals Shifts in Music Listening Behavior Among Adults in the U.S.",
@@ -227,7 +227,7 @@ const ScienceDb = () => {
             "summary":"The Chinese scientific community will collaborate with international peers to promote science literacy, so as to better equip people around the world with the knowledge to make informed decisions related to science and technology, and help them address critical global challenges. Zhang Yuzhuo, vice-president of the China Association for Science and Technology, said common challenges such as climate change, marine pollution, loss of biodiversity and desertification are threatening the Earth's ecosystems and our lives."
         },
         {   "title":"Herbert and Florence Irving Cancer Research Data Scientists",
-            "author":NULL,
+            "author":null,
             "summary":"The Data Science Institute of Columbia University invites applications for research scientists at all levels: Associate Research Scientist, Research Scientist, and Senior Research Scientist. This position is endowed and the holder will be named a Herbert and Florence Irving Cancer Research Data Scientist. A successful candidate will serve as a resident expert in data science whose research interests are specifically focused on advancing and applying data science to understanding cancer. The incumbent will foster collaborations with world-class faculty across Columbia's schools, centers and institutes in order to guide, plan and execute data science research and technological innovation in cancer-related research."
         },
         {   "title":"Open and Reproducible Data Science: Highlights from the Arkansas Bioinformatics Consortium 2022",
@@ -235,19 +235,19 @@ const ScienceDb = () => {
             "summary":"We are pleased to announce this Research Topic: Open and Reproducible science developed in collaboration with the 8th Annual Conference of Arkansas Bioinformatics Consortium (AR-BIC2022). Established in 2014, the Arkansas Bioinformatics Consortium (AR-BIC) has consistently facilitated thoughtful communication and collaboration, with an annual conference that attracts more than 200 attendees and features the voices of experts in data science, artificial intelligence (AI), machine learning (ML), computational biology, and bioinformatics."
         },
         {   "title":"Trust in science and scientists grows amid pandemic",
-            "author":NULL,
+            "author":null,
             "summary":"Global trust in science and scientists has grown immensely during the pandemic, according to a new report released by the health research foundation Wellcome Trust.The organization's Wellcome Global Monitor survey found that 80 percent of people globally said they trust science either 'a lot' or 'some' and 77 percent said the same about scientists. The percentage of people who said they trust science and scientists 'a lot' rose by nine percentage points from when the foundation last released the report in 2018."
         },
         {   "title":"14 Companies Nominated for a Life Science Industry Award for Innovation",
-            "author":NULL,
+            "author":null,
             "summary":"ARLINGTON, Va. (PRWEB) December 02, 2021 BioInformatics Inc., part of Science and Medicine Group, the leading research and advisory firm serving the life science tools market, today announced that 14 companies have been nominated for a Life Science Industry Award for launching one of the most innovative new products in 2021. Since 2002, the Life Science Industry Awards have recognized manufacturers of the 'tools of science' that help advance biological research and drug discovery. Traditionally, the Life Science Industry Awards have been a bi-annual event where thousands of life scientists nominate and vote for the best performing supplier in 10 distinct customer support, service and communications categories."
         },
         {   "title":"Weed Science Societies Announce Upcoming Annual Meetings",
-            "author":NULL,
+            "author":null,
             "summary":"WESTMINSTER, Colo. (PRWEB) November 29, 2021 Today the Weed Science Society of America (WSSA) and its regional affiliates announced plans for upcoming annual meetings – each designed to spotlight new innovations and best practices in weed control. First up are meetings of the North Central and Northeastern societies. Details for those two events are below, followed by 'save the date' information for the annual meetings of WSSA and the Southern and Western societies. North Central Weed Science Society (NCWSS), December 13-16, 2021 The North Central society will host its annual meeting in Grand Rapids, Michigan."
         },
         {   "title":"Back Bay Life Science Advisors Announces Expansion into Canada with Opening of Toronto Office",
-            "author":NULL,
+            "author":null,
             "summary":"Back Bay Life Science Advisors, an international partner for biopharma, medtech and healthtech companies and their investors, announced the opening of its new office in Toronto, Canada, to further support clients and partners located across the global life sciences and healthcare markets. With a strong presence in Boston and Northern Europe, this North American expansion further strengthens Back Bay's role in developing promising life science communities globally."
         },
         {   "title":"Closing the Gap in Computer Science Education",
@@ -283,7 +283,7 @@ const EconomyDb = () => {
             "summary":"The tourism environment is the basis of sustainable development in the tourism economy. Exploring the coupling relationship between tourism economy and ecological environment systems can promote not only ecology-based tourism, but also contribute to the sustainable development of tourism economy. Based on data from Nagasaki Prefecture, Japan, from 2010–2019, this paper aims to introduce an indicator system and develop an integrated approach to assess the coupling and coordination between the tourism economy and the environment."
         },
         {   "title":"Willis Towers Watson expands aviation insurance broking expertise and solutions with acquisition of Aerosure",
-            "author":NULL,
+            "author":null,
             "summary":"The market is nervous about omicron. Cramer says it's time to pounce.Bargains aren't bargains if there's not much hope for a strong rebound move.Do this instead of paying high power bills. It's absolutely genius. This program has power companies furious.The Wall Street giant really likes these dividend stocks — for very good reasons.To give you a reference point, the Federal Reserve targets an annual inflation rate of about 2%. The question is whether it's transitory (pushed higher by temporary supply chain issues), or whether it's here to stay, and Federal Reserve Chairman Jerome Powell might have just conceded that it's set to remain higher for much longer."
         },
         {   "title":"Hong Kong's Hang Seng Drops 1% as Tech Shares Fall; Investors Monitor Bitcoin Volatility",
@@ -291,11 +291,11 @@ const EconomyDb = () => {
             "summary":"Investors monitored crypto after bitcoin prices were volatile throughout the weekend, dropping sharply Saturday afternoon during Asia hours. Tech stocks fell in Hong Kong, while troubled Chinese property develop Evergrande also tumbled. Four new stocks — including Chinese technology giants JD and Netease — were added to the benchmark Hang Seng index, while troubled Chinese property developer Evergrande will be removed from the China Enterprises index. SINGAPORE — Stocks in Asia-Pacific dropped on Monday, while investors monitored bitcoin prices after they fell sharply over the weekend."
         },
         {   "title":"Singapore blockchain startup raised USD 1.2 million in under 3 minutes.",
-            "author":NULL,
+            "author":null,
             "summary":"The market is nervous about omicron. Cramer says it's time to pounce.The Oracle of Omaha knows how to beat inflation. So ride his coattails.A massive and surprising new transition could soon impact the wealth of thousands, while leaving everyone else worse off than before.The Wall Street giant really likes these dividend stocks — for very good reasons.Bargains aren't bargains if there's not much hope for a strong rebound move.To give you a reference point, the Federal Reserve targets an annual inflation rate of about 2%."
         },
         {   "title":"SoftBank Slumps Another 6.5% After Barrage of Bad Portfolio News",
-            "author":NULL,
+            "author":null,
             "summary":"The market is nervous about omicron. Cramer says it's time to pounce.You need additional sources of retirement income. Dividends can help supplement Social Security. Investing a total of $100,000 in these three dividend stocks could give you annual income of close to $6,300.Get the best information at your fingertips, here. Yahoo Search provides quick and efficient solutions for all your needs.The Wall Street giant really likes these dividend stocks — for very good reasons.In this article, we will take a look at the top 10 stocks to sell now according to Christopher Hillary's Roubaix Capital."
         },
         {   "title":"Possible turnaround? 7 stocks with up to 39% upside in next 12 months",
@@ -308,4 +308,8 @@ const EconomyDb = () => {
         }
     ]);
 }
-export { CurrentEventsDb, ScienceDb, PoliticsDb, MusicDb, PopcultureDb, EconomyDb}
+const GetArticles = () => {
+    return ([MoviesDb(), PopcultureDb(), PoliticsDb(), CurrentEventsDb(), ScienceDb(), MusicDb(), EconomyDb()])
+}
+
+export {GetArticles}

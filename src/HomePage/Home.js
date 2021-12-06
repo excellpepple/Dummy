@@ -8,7 +8,8 @@ import {
     tags as Tags,
 
 } from '../data/tags'
-import {articles as Articles} from "../global/FetchArticles"
+// here is the database
+import {GetArticles} from "../data/ArticleDb";
 import ArticlePage from "../ArticlePage/ArticlePage";
 
 
@@ -18,7 +19,7 @@ import ArticlePage from "../ArticlePage/ArticlePage";
 export default function Home() {
     const [tags, setTags] = useState(Tags)
     const [userTags, setUserTags] = useState([])
-
+    console.log(GetArticles())
     const updateValues = (tagname, value) =>{
         let message = "";
         // const shifter = (target) =>{
