@@ -19,8 +19,9 @@ import Science from "../images/bg-images/Science.jpg";
 
 export default function Article(props) {
 
-    const {author, title, description} = props.data[0]
+    // const { summary} = props.data[0]
     const tagname = props.data[1]
+    // const subtags = [...props.data[2]]
     const bg_img = () => {
         // eslint-disable-next-line default-case
         switch (tagname) {
@@ -58,17 +59,18 @@ export default function Article(props) {
                             <img className="postcard__img" src={bg_img()} alt="Image Title"/>
                         </a>
                         <div className="postcard__text">
-                            <h1 className="postcard__title blue"><a href="#">{voca.titleCase(title)}</a></h1>
+                            <h1 className="postcard__title blue"><a href="#">{(props.data[0].title !== null)? voca.titleCase(props.data[0].title): "N/A"}</a></h1>
                             <div className="postcard__subtitle small">
                                 <time dateTime="2020-05-25 12:00:00">
-                                    <i className="fas fa-calendar-alt mr-2"></i>Author: {(author)? voca.titleCase(author): "N/A"}
+                                    <i className="fas fa-calendar-alt mr-2"></i>Author: {(props.data[0].author !== null)? voca.titleCase(props.data[0].author): "N/A"}
                                 </time>
                             </div>
                             <div className="postcard__bar"></div>
-                            <div className="postcard__preview-txt">{description}
+                            <div className="postcard__preview-txt">{(props.data[0].summary !== null)? voca.titleCase(props.data[0].summary): "N/A"}
                             </div>
                             <ul className="postcard__tagbox">
                                 <li className="tag__item"><i className="fas fa-tag mr-2"/>Tag: {tagname}</li>
+                                {/*<li className="tag__item"><i className="fas fa-tag mr-2"/>Sub-tags: {subtags.map(subtag => subtag)}</li>*/}
 
                                 <li className=" tag__item play  bluefas">
                                     <a  onClick={()=> {
@@ -77,7 +79,10 @@ export default function Article(props) {
                                     }}><LikeOutlined className=" fa-play mr-2" /></a>
                                 </li>
                                 <li className=" tag__item play  bluefas">
-                                    <DislikeOutlined  className=" fa-play mr-2" />
+                                    <a  onClick={()=> {
+                                        props.handleLike(tagname);
+                                        setVisible(false);
+                                    }}><DislikeOutlined  className=" fa-play mr-2" /></a>
                                 </li>
                             </ul>
                         </div>

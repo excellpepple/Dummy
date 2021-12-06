@@ -51,7 +51,7 @@ export default function Home() {
         // Creates an Array to store the chosen articles
         const render = [];
         // loops the code 5 times
-        for (let j = 0; j < 15; j++) {
+        for (let j = 0; j < 5; j++) {
             // Creates an Array to store the averages from tags IN ORDER
             const averages = [];
 
@@ -104,7 +104,7 @@ export default function Home() {
                 <Routes>
                     <Route exact path="/" element={<Start/>}/>
                     <Route path="/preference" element={<PrefrencePage tags={userTags} handleUpdate={updateValues}/>}/>
-                    <Route path="/articles" element={<ArticlePage handleUpdate={updateValues}/>}/>
+                    <Route path="/articles" element={<ArticlePage handleUpdate={updateValues} articles={(() => rendered_articles)()}/>}/>
                     <Route
                   path="*"
                   element={

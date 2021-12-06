@@ -9,7 +9,7 @@ export default function ArticlePage(props) {
     return (
         <>
 
-            {(!userTags)? <EmptyTags/>: <Generator/>}
+            {(!userTags)? <EmptyTags/>: <Generator articles={props.articles} handleUpdate={props.handleUpdate}/>}
         </>
     );
 }
