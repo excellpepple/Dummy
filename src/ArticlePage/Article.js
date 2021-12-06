@@ -18,7 +18,7 @@ export default function Article(props) {
 
     // const { summary} = props.data[0]
     const tagname = props.data[1]
-    const id = props.data[3]
+    const id = props.id
     // const subtags = [...props.data[2]]
     const bg_img = () => {
         // eslint-disable-next-line default-case
@@ -48,7 +48,7 @@ export default function Article(props) {
 
     return (
         <>
-            <section className={visible?'fadeIn':'fadeOut'}>
+            <section className={""} id={id}>
                 <div className="container py-4">
 
 
@@ -92,4 +92,4 @@ export default function Article(props) {
         </>
     );
 }
- 
+
