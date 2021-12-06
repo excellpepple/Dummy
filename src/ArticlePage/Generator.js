@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Article from "./Article";
-
+import {message} from 'antd'
 // assing values to tags
 const checkTags = (Main, Checked) => {
     return Main.map(tag => {
@@ -46,13 +46,18 @@ export default function Generator(props) {
         console.log(`we just updated ${tagName} by 0`)
         setRenderCount(prev => prev++)
     };
+    const DataNotThere = (tagname) => {
+      message.warning(`We are currently out of articles related to ${tagname}.`);
+    };
 
     return (
         <>
             <div className="container-fluid">
 
             {(articles !== "empty")? (
-                articles.map(item => <Article data={item} handleLike={like} handleDislike={dislike} />)
+                articles.map(item => (
+                    (item[0] !== "empty")? <Article data={item} handleLike={like} handleDislike={dislike} />: DataNotThere(item[1])
+                ))
             ):(
                 <h1>Its Empty</h1>
             )}
